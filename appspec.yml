@@ -4,6 +4,9 @@ files:
   - source: /
     destination: /home/ec2-user/admin-side/
 hooks:
+  ApplicationStop:
+     - location: ./stop.sh
+      timeout: 300   
   ApplicationStart:
     - location: ./start.sh
       timeout: 300
