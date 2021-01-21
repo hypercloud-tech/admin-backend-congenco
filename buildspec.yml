@@ -14,7 +14,7 @@ phases:
     commands:
       - echo Build started on `date`   
       - rm package-lock.json
-      - npm cache clean --force && npm install && npm run build      
+      - npm cache clean --force && npm install && yarn build      
       - ls -l
 artifacts:
   files:
