@@ -12,7 +12,8 @@ phases:
       - ./install-node.sh
   build:
     commands:
-      - echo Build started on `date`          
+      - echo Build started on `date`   
+      - rm package-lock.json
       - npm cache clean --force && npm install && npm run build      
       - ls -l
 artifacts:
