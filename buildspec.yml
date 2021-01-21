@@ -14,7 +14,8 @@ phases:
     commands:
       - echo Build started on `date`   
       - rm package-lock.json
-      - npm cache clean --force && npm install && yarn build      
+      - npm cache clean --force && npm install && yarn build
+      - aws s3 sync . s3://congenco-artifacts/admin-backend
       - ls -l
 artifacts:
   files:
